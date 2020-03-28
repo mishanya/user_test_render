@@ -28,10 +28,9 @@ export default  class Search  extends Component {
     })
     .then(
       res => res.json(),
-      err => this.props.updateContent({data: null, error: 'Fetching error'})
+      err => this.setState({fetching: false}) || this.props.updateContent({data: null, error: 'Fetching error'})
     )
-   .then (json => this.props.updateContent({data: json.response, error: json.status.message}))
-   .then(() => this.setState({fetching: false}))
+   .then (json => this.setState({fetching: false}) || this.props.updateContent({data: json.response, error: json.status.message}))
 
   }
 

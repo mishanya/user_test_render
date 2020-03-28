@@ -21,7 +21,7 @@ class App extends Component {
 	      <div>
 					<Header />
 					<div className='container my-3'>
-						<div className='row'>
+						<div className='row w-100'>
 							  <Search updateContent={this.updateContent}/>
 						 		<div className='py-2 col-12 text-center'>{error}</div>
 						 		<div className='row text-center mt-5'>
