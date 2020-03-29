@@ -1,5 +1,5 @@
 npm i
 
-npm start
+npm run dev
 
 http://localhost:5000
